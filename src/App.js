@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Routes from './routes';
+import Routes from './pages';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import { library } from '@fortawesome/fontawesome-svg-core';
+// eslint-disable-next-line
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faSearch, faTimes, faStroopwafel, faPencilAlt, faBell, faHammer } from '@fortawesome/free-solid-svg-icons';
 import './css/App.css';

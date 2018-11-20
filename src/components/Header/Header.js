@@ -1044,7 +1044,6 @@ class Header extends React.Component {
             <div className="col-2">
             <ul
                 id="j-globalNav "
-                className="navbar-nav mr-auto"
                 role="menubar"
                 className="j-globalNav nav">
             <li

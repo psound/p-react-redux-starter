@@ -1,10 +1,15 @@
-const appReducer = (state = {}, action) => {
+const INITIAL_STATE = {
+	data:[]
+}
+
+
+const AppReducer = (state = INITIAL_STATE, action) => {
 	switch (action.type){
 		case 'INITIAL_LOAD':
-			return {...state, status: action.payload};
+			return { ...state, data: action.payload.data };
 		default:
 			return state;
 	}
 }
 
-export default appReducer;
+export default AppReducer;

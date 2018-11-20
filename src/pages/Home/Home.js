@@ -1,4 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {initialLoad} from '../../actions/ActionTypes';
 
 class Contact extends React.Component {
 
@@ -10,8 +13,8 @@ class Contact extends React.Component {
     }
 
     componentDidMount() {
-        //console.log('Home View Props', this.props);
-
+      //console.log('Home View Props', this.props);
+      this.props.initialLoad();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -29,4 +32,16 @@ class Contact extends React.Component {
     }
 }
 
-export default Contact;
+function mapStateToProps(state) {
+  console.log('STATE On PST====>', state);
+  return {
+    title: state.app.title,
+    networkError: state.app.networkError
+  };
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({ initialLoad }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);
