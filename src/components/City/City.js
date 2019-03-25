@@ -7,33 +7,33 @@ import { doLocationData } from '../../actions/appActions';
 //let jsonData = require('../../data/location.json');
 
 class City extends React.Component {
-      constructor (props) {
-        super(props);
-        this.state = {}
-      }
+  constructor (props) {
+    super(props);
+    this.state = {}
+  }
 
-      componentDidMount = () => {
-        this.props.doLocationData();
-      }
+  componentDidMount = () => {
+    this.props.doLocationData();
+  }
 
-      render() {
-        return(
-          <div>
-             {this.props.cities.map((city, c) => {
-               return(
-                 <div className="city" key={c}>
-                   <div className="city-name">
-                     <div className="city-name">
-                        <span>{city}</span>
-                     </div>
-                   </div>
+  render() {
+    return(
+      <div>
+         {this.props.cities.map((city, c) => {
+           return(
+             <div className="city" key={c}>
+               <div className="city-name">
+                 <div className="city-name">
+                    <span>{city}</span>
                  </div>
-               )
-             })
-            }
-          </div>
-        )
-      }
+               </div>
+             </div>
+           )
+         })
+        }
+      </div>
+    )
+  }
 }
 
 function mapStateToProps(state) {
