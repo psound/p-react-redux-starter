@@ -1,4 +1,6 @@
 import React from 'react';
+import Logo from '../../img/radio-logo.png';
+import City from '../../components/City';
 
 class Contact extends React.Component {
 
@@ -19,13 +21,18 @@ class Contact extends React.Component {
     }
   render() {
       return(
-          <div className="container">
-              <div className="starter-template">
-                  <h1>Bootstrap starter template React Modified</h1>
-                  <p className="lead">Use this document as a way to quickly start any new React.js project.<br /> All you get is this text and a mostly barebones HTML document.</p>
-              </div>
+        <div className="container">
+    			<div className="background">
+                <img src={Logo} className="img-responsive logo" alt="pedro garcia music producer" />
+                <div className="col-md-4 col-md-offset-5"><iframe src="radio.html" title="player"></iframe></div>
+                <City className="col-md-3"/>
+        				<div className="clear"></div>
+        				<div className="description">
+        					Pedro Garcia is a music producer, songwriter, and mixing engineer. He played guitar for Britney Spears, and has produced albums with Finch, New Found Glory and Jay-Z.
+        				</div>
+      			</div>
           </div>
-        )
+        );
     }
 }
 

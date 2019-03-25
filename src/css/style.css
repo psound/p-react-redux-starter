@@ -1,0 +1,110 @@
+/*
+http://www.opedro.com
+Style sheet version 1.0
+Author: Pedro Garcia
+*/
+@font-face { font-family: bright-noise; src: url('fonts/Bringthanoize.ttf'); }
+@font-face { font-family: birth-hero; src: url('fonts/BIRTH-OF-A-HERO.ttf'); }
+
+body {
+	background: #959796 url('../img/wood-repeat.jpg');
+}
+a {
+	color:#000;
+	text-decoration:none;
+}
+a:hover {
+	color:#010101;
+	cursor: pointer;
+}
+.background {
+	margin:15px auto;
+	background:url("../img/background.jpg") transparent;
+	opacity:0.6;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 1140px;
+	height: 100%;
+}
+.main {
+
+}
+.wrapper {
+	background:transparent;
+	/*border: 13px gray solid;*/
+
+	padding:20px;
+	/*box-shadow: 0px 2px 15px #333;*/
+}
+.logo {
+	padding-top:13px;
+	margin-left:20px;
+}
+.addresses {
+
+}
+.city {
+	font-size:15px;
+	margin-bottom:10px;
+	margin-left: 35px;
+}
+.city-name {
+	font-family: bright-noise;
+	font-size:19px;
+	font-weight:bold;
+}
+.clear {
+	clear:both;
+}
+.postage {
+	font-family: bright-noise;
+	display:none;
+	color:#010101;
+	margin-top:10px;
+	margin-left:10px;
+	font-size:16px;
+}
+.description {
+	position:relative;
+	bottom:0px;
+	color:transparent;
+}
+.player {
+	position:relative;
+	top:260px;
+	left:-330px;
+}
+.opedro-radio {
+	position: relative;
+    display: block;
+	margin-top: 55px;
+}
+.media-controls {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #282f31;
+    color: #fff;
+}
+.media-controls input[type="range"] {
+	background: blue;
+	margin-left: 10px;
+	height: 2px;
+}
+.media-controls button {
+	border: 1px dashed #fff;
+    background: transparent;
+	margin-left: 10px;
+}
+progress
+.wrap-radio {
+	position: relative;
+	right: 0px
+}
+.wrap-radio video {
+	opacity: .6;
+	width: 100%;
+}
+iframe {
+	border:0;
+}

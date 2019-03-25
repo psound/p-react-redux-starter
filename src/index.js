@@ -13,8 +13,9 @@ const initialState = {}
 
 const persistedState = loadState(initialState);
 
-const enhancers = compose(applyMiddleware(thunk), window.devToolsExtension
-	? window.devToolsExtension()
+
+const enhancers = compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+	? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
 	: f => f);
 
 const store = createStore(rootReducer, persistedState, enhancers);
