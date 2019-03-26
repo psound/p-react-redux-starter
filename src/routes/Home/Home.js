@@ -25,7 +25,7 @@ class Contact extends React.Component {
     			<div className="background">
                 <img src={Logo} className="img-responsive logo" alt="pedro garcia music producer" />
                 <div className="col-md-4 col-md-offset-5"><iframe src="radio.html" title="player"></iframe></div>
-                <City className="col-md-3"/>
+                <div className="col-md-3"><City /></div>
         				<div className="clear"></div>
         				<div className="description">
         					Pedro Garcia is a music producer, songwriter, and mixing engineer. He played guitar for Britney Spears, and has produced albums with Finch, New Found Glory and Jay-Z.

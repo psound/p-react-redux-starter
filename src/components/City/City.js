@@ -23,9 +23,7 @@ class City extends React.Component {
            return(
              <div className="city" key={c}>
                <div className="city-name">
-                 <div className="city-name">
-                    <span>{city}</span>
-                 </div>
+                  <span>{city.city}</span> ({city.activeUsers})
                </div>
              </div>
            )
@@ -38,7 +36,7 @@ class City extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    cities: state.app.cities
+    cities: state.app.cities,
   };
 }
 

@@ -53,6 +53,9 @@ a:hover {
 	font-size:19px;
 	font-weight:bold;
 }
+.city-name span {
+	margin-left: 20px;
+}
 .clear {
 	clear:both;
 }
