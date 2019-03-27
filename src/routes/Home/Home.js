@@ -16,9 +16,6 @@ class Contact extends React.Component {
 
     }
 
-    componentWillReceiveProps(nextProps) {
-        //console.log('next Props:', nextProps);
-    }
   render() {
       return(
         <div className="container">

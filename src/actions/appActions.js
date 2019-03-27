@@ -15,7 +15,7 @@ export const doLocationData = () => {
       //console.log("from db", res.data);
       res.data.map((citi) => {
         if(repeatedCityArr.indexOf(citi.city) <= -1) {
-          console.log('aqui');
+          //console.log('aqui');
           cities.push(citi)
         }
         return repeatedCityArr.push(citi.city);
@@ -26,7 +26,7 @@ export const doLocationData = () => {
     .then(
       (response) => {
         //console.log('Location Array Data is ', repeatedCityArr);
-        console.log('indexOf', repeatedCityArr.indexOf(response.data.city));
+        //console.log('indexOf', repeatedCityArr.indexOf(response.data.city));
         if(repeatedCityArr.indexOf(response.data.city) <= -1 ) {
           repeatedCityArr.push(response.data.city);
           cities.push(response.data);
@@ -44,16 +44,16 @@ export const doLocationData = () => {
           let numCitys = 0;
           repeatedCityArr.map((cityName) => {
             if(cityName.includes(cityCode.city)) {
-              console.log(cityCode.city)
+              //console.log(cityCode.city)
               numCitys ++;
             }
             return null;
           });
-          console.log(numCitys);
+          //console.log(numCitys);
           cityCode['activeUsers'] = numCitys;
           return null;
         });
-        console.log("cities--->", cities);
+        //console.log("cities--->", cities);
         dispatch({ type: "LOCATION_DATA", payload: { cities: cities }});
       })
     .catch(
@@ -62,4 +62,8 @@ export const doLocationData = () => {
       }
     );
   }
+}
+
+export const leavePage = (event) => {
+    alert('adios', event);
 }
