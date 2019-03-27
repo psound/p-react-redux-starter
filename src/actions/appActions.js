@@ -29,6 +29,7 @@ export const doLocationData = () => {
         console.log('indexOf', repeatedCityArr.indexOf(response.data.city));
         if(repeatedCityArr.indexOf(response.data.city) <= -1 ) {
           repeatedCityArr.push(response.data.city);
+          cities.push(response.data);
           console.log("here")
           // add cities to the db
           axios.post("http://10.0.1.51:3001/api/putData", {
