@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faTimes, faStroopwafel, faPencilAlt, faBell, faHammer } from '@fortawesome/free-solid-svg-icons';
 import './css/App.css';
 
+
 library.add(faSearch, faTimes, faStroopwafel, faPencilAlt, faBell, faHammer);
 
 class App extends Component {

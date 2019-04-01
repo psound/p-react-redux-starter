@@ -9,7 +9,7 @@ export const doLocationData = () => {
     let repeatedCityArr = [];
     //Get Active cities on the db.
 
-    fetch("http://10.0.1.51:3001/api/getData")
+    fetch("http://127.0.0.1:3001/api/getData")
     .then(data => data.json())
     .then(res => {
       //console.log("from db", res.data);
@@ -32,7 +32,7 @@ export const doLocationData = () => {
           cities.push(response.data);
           console.log("here")
           // add cities to the db
-          axios.post("http://10.0.1.51:3001/api/putData", {
+          axios.post("http://127.0.0.1:3001/api/putData", {
             city: response.data.city,
             zip: response.data.zip,
             latitude: response.data.latitude,
@@ -64,6 +64,13 @@ export const doLocationData = () => {
   }
 }
 
-export const leavePage = (event) => {
-    alert('adios', event);
+export const aboutToLeave = (e) => {
+  console.log(e);
+  return dispatch => {    
+    window.onbeforeunload = function() {
+       return "Do you really want to leave our brilliant application?";
+       //if we return nothing here (just calling return;) then there will be no pop-up question at all
+       //return;
+    }
+  }
 }

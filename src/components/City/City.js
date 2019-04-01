@@ -2,7 +2,7 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import { doLocationData, leavePage } from '../../actions/appActions';
+import { doLocationData } from '../../actions/appActions';
 
 //let jsonData = require('../../data/location.json');
 
@@ -10,7 +10,7 @@ class City extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-  
+
     }
   }
 
@@ -23,7 +23,7 @@ class City extends React.Component {
   }
 
     componentWillUnmount() {
-      window.addEventListener('beforeunload', this.props.leavePage)
+
     }
 
   render() {
@@ -51,7 +51,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({ doLocationData, leavePage }, dispatch);
+  return bindActionCreators({ doLocationData }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(City);
